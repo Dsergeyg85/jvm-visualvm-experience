@@ -14,19 +14,19 @@ public class JvmExperience {
         Thread.sleep(30_000);
 
         loadToMetaspaceAllFrom("io.vertx");
-        Thread.sleep(3_000);
+        Thread.sleep(10_000);
         loadToMetaspaceAllFrom("io.netty");
-        Thread.sleep(3_000);
+        Thread.sleep(10_000);
         loadToMetaspaceAllFrom("org.springframework");
-        Thread.sleep(3_000);
+        Thread.sleep(10_000);
 
         System.out.println(LocalTime.now() + ": now see heap");
         List<SimpleObject> simpleObjects = createSimpleObjects(5_000_000);
-        Thread.sleep(3_000);
+        Thread.sleep(10_000);
         simpleObjects.addAll(createSimpleObjects(5_000_000));
-        Thread.sleep(3_000);
+        Thread.sleep(10_000);
         simpleObjects.addAll(createSimpleObjects(5_000_000));
-        Thread.sleep(3_000);
+        Thread.sleep(10_000);
     }
 
     static void loadToMetaspaceAllFrom(String packageName) {
